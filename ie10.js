@@ -31,26 +31,27 @@
 
 				return data;
 			},
-			set: function (data) {
+			
+			// set: function (data) {
 
-				if (typeof data !== 'object')
-					throw "Incorrect type of data set, must be an Object";
+			// 	if (typeof data !== 'object')
+			// 		throw "Incorrect type of data set, must be an Object";
 
-				var attrs = this.attributes;
+			// 	var attrs = this.attributes;
 
-				for (var i = 0; i < attrs.length; ++i) {
-					var name = attrs[i].name;
+			// 	for (var i = 0; i < attrs.length; ++i) {
+			// 		var name = attrs[i].name;
 
-					if (!name || !/^data\-.*/.test(name))
-						continue;
+			// 		if (!name || !/^data\-.*/.test(name))
+			// 			continue;
 
-					this.removeAttribute(name);
-					--i;
-				}
+			// 		this.removeAttribute(name);
+			// 		--i;
+			// 	}
 
-				for (var key in data)
-					this.setAttribute(['data', key].join('-'), data[key]);
-			},
+			// 	for (var key in data)
+			// 		this.setAttribute(['data', key].join('-'), data[key]);
+			// },
 			enumerable: true,
 			configurable: false
 		});
